@@ -10,12 +10,20 @@
 
     <header>
         <div class="container">
-            <h1 class="logo">PETROTEH Engineering</h1>
+            
+            <!-- Am adăugat un wrapper pentru siglă + text -->
+            <div class="logo-wrapper">
+                <!-- Pune numele fișierului tău cu sigla în src="" (ex: src="sigla.png") -->
+                <img src="imagini/sigla.jpg" alt="Logo" class="logo-img">
+                <h1 class="logo">PETROTEH Engineering</h1>
+            </div>
+
             <nav>
                 <ul>
                     <li><a href="#acasa">Home</a></li>
                     <li><a href="#despre">About Us</a></li>
                     <li><a href="#servicii">Services</a></li>
+                    <li><a href="#echipa">Our Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -34,39 +42,54 @@
         <h2>About PETROTEH Engineering</h2>
         <!-- SECȚIUNEA GALERIE FOTO (SLIDER) -->
     <section id="galerie" class="container sec-padding text-center">
-        <section id="echipa" class="container sec-padding text-center">
+       <section id="echipa" class="container sec-padding text-center">
         <h2>Our Team</h2>
-        <p style="margin-bottom: 40px;">Experții din spatele inovațiilor noastre industriale.</p>
+        <p style="margin-bottom: 50px;">The leadership and technical experts driving our industrial excellence.</p>
         
-        <div class="grid-echipa">
-             <div class="card-membru">
-                <div class="poza-membru Adrian"></div>
-                <h3>Adrian Avram</h3>
-                <span class="functie">Administrator</span>
-                <p>Gestionează mandate comerciale complexe și oferte pentru proiecte internaționale de rafinărie, facilitând parteneriate strategice la nivel global pentru extracție și procesare.</p>
-            </div>
-            <div class="card-membru">
-                <div class="poza-membru Arafat"></div>
-                <h3>Arafat Khaled Marius</h3>
-                <span class="functie">IT Executive Manager</span>
-                <p>A great IT professional with extensive experience in managing technical projects and leading development teams.He can use AutoCAD,ANSYS,CATIA V5,NX</p>
+        <div class="org-tree">
+            
+            <!-- LEVEL 1: TOP ADMINISTRATOR -->
+            <div class="level level-1">
+                <div class="card-membru admin-card" >
+                    <div class="poza-membru Adrian"><span class="crown"></span></div>
+                    <h3>Adrian Avram</h3>
+                    <span class="functie">Administrator</span>
+                    <p>Manages complex commercial mandates and offers for international refinery projects, facilitating strategic global partnerships for extraction and processing.</p>
+                </div>
             </div>
 
-           
-             <div class="card-membru">
-                <div class="poza-membru Galeb"></div>
-                <h3>Arafat Moh'd Galeb Rahim</h3>
-                <span class="functie">Consultant Partnere</span>
-                <p>Gestionează mandate comerciale complexe și oferte pentru proiecte internaționale de rafinărie, facilitând parteneriate strategice la nivel global pentru extracție și procesare.</p>
-            </div>
+            <!-- CONNECTING NEON LINE -->
+            <div class="connector-line"></div>
 
-            <div class="card-membru">
-                <div class="poza-membru placeholder-rosu"></div>
-                <h3>Gabriel Negrea</h3>
-                <span class="functie">Chief Technology Officer</span>
-                <p>Dezvoltă infrastructuri software customizate pe sisteme de operare bazate pe nucleu Linux, implementând modele de inteligență artificială rulate local pentru optimizarea fluxurilor tehnologice.</p>
-            </div>
+            <!-- LEVEL 2: EXECUTIVE TEAM -->
+            <div class="level level-2">
+                
+                <!-- Member 1 -->
+                <div class="card-membru">
+                    <div class="poza-membru Arafat"></div>
+                    <h3>Arafat Khaled Marius</h3>
+                    <span class="functie">IT Executive Manager</span>
+                    <p>A great IT professional with extensive experience in managing technical projects and leading development teams. Highly proficient in AutoCAD, ANSYS, CATIA V5, and NX.</p>
+                </div>
 
+                <!-- Member 2 -->
+                <div class="card-membru">
+                    <div class="poza-membru Galeb"></div>
+                    <h3>Arafat Moh'd Galeb Rahim</h3>
+                    <span class="functie">Partner Consultant</span>
+                    <p>Manages complex commercial mandates and offers for international refinery projects, facilitating strategic global partnerships for extraction and processing.</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="card-membru">
+                    <div class="poza-membru Gabriel" ></div>
+                    <h3>Gabriel Negrea</h3>
+                    <span class="functie">Chief Technology Officer</span>
+                    <p>Develops custom software infrastructures on Linux kernel-based operating systems, implementing locally run artificial intelligence models for technological workflow optimization.</p>
+                </div>
+
+            </div>
+            
         </div>
     </section>
         <h2>Our Projects</h2>
@@ -134,14 +157,66 @@
     </section>
 
 
-    <section id="contact" class="container sec-padding text-center">
-        <h2>Contact Us</h2>
-        <p>We are ready to discuss your next project.</p>
-        <div class="info-contact">
-            <p><strong>Email:</strong> petroteh.engineering@gmail.com</p>
-            <p> Petroteh.Engineering@protonmail.com</p>
-            <p><strong>Telefon:</strong> +40 700 000 000</p>
-            <p><strong>Adresă:</strong> Magura Vulturului nr. 9, București, România</p>
+    <!-- CONTACT US SECTION -->
+    <section id="contact" class="container sec-padding">
+        <div class="text-center">
+            <h2>Get In Touch</h2>
+            <p style="margin-bottom: 50px;">We’d love to collaborate on your next robotics, engineering, or refinery project. Let's talk!</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <!-- Left Side: Interactive Info Cards -->
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email Us</h4>
+                        <p>petroteh.engineering@protonmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email Us</h4>
+                        <p>petroteh.engineering@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Call Us Direct</h4>
+                        <p>+40 725 565 305</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Headquarters</h4>
+                        <p>9, magura Vulturului Street, District 2, Bucharest, Romania</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Cute Cyber Message Form -->
+            <div class="contact-form-wrapper">
+                <h3>Send a Quick Message 💬</h3>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to the Petroteh team.');">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Tell us a bit about your project or inquiry..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Send Message 🚀</button>
+                </form>
+            </div>
+
         </div>
     </section>
 
