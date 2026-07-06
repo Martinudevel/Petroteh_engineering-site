@@ -1,33 +1,36 @@
-const slider = document.querySelector('.slider');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+let currentDocIndex = 0;
+const totalDocs = 8;
 
-        // Când apeși click
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.classList.add('active');
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
+function updateCarousel() {
+    const track = document.querySelector('.epc-carousel-track');
+    const tabs = document.querySelectorAll('.epc-tab');
+    
+    if (!track) return;
 
-        // Când ieși cu mouse-ul de pe slider
-        slider.addEventListener('mouseleave', () => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
+    // Slide the track horizontally
+    track.style.transform = `translateX(-${currentDocIndex * 100}%)`;
 
-        // Când ridici click-ul
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
+    // Update active tab styling
+    tabs.forEach((tab, index) => {
+        if (index === currentDocIndex) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+}
 
-        // Când miști mouse-ul
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return; // Se activează doar dacă ții click apăsat
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 1.5; // Viteza de tragere (1.5 e un pic mai rapid)
-            slider.scrollLeft = scrollLeft - walk;
-        });
+function switchDoc(index) {
+    currentDocIndex = index;
+    updateCarousel();
+}
+
+function nextDoc() {
+    currentDocIndex = (currentDocIndex + 1) % totalDocs;
+    updateCarousel();
+}
+
+function prevDoc() {
+    currentDocIndex = (currentDocIndex - 1 + totalDocs) % totalDocs;
+    updateCarousel();
+}
